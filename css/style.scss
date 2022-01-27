@@ -1,0 +1,846 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,500&display=swap');
+
+$white : #ffffff;
+$primaryColor: #590a5b;
+$secondaryColor: #ffaf38;
+$black: #000000;
+$lightGray: #ededed;
+$poppins: 'Poppins', sans-serif;
+$roboto: 'Roboto', sans-serif;
+$shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$lightPrimary: #e1a8e2;
+$gray: #e5e5e5;
+
+
+a{
+  font-family: $roboto;
+}
+
+label{
+    font-family: $poppins;
+}
+
+*{
+    margin: 0;
+    line-height: 1 !important;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    background: $lightGray;
+    height: 100%;
+}
+
+header{
+    width: 100% !important;
+    background: $white;
+    height: 60px;   
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+ .logo{
+     margin-left: 20px;
+     a{
+         text-decoration: none;
+            color: $primaryColor;
+     }
+ }
+
+ .actionLink{
+     margin-right: 20px;
+     a{
+         margin: 10px;
+         text-decoration: none;
+         color: $primaryColor;
+         &:hover{
+             border-bottom: 3px solid $primaryColor;
+             margin-top: 50px;
+         }
+     }
+ }
+}
+
+
+.loginRegWrapper{
+    height: 100%;
+    padding: 20px;
+  
+    .container{
+        h5{
+            color: $primaryColor;
+        }
+    }
+
+    form {
+        .form-group{
+            margin-top: 10px;
+           
+            .form-control{
+                box-shadow: none !important;
+                border: 1px solid #c4c4c4;
+                border-radius: 0px !important;
+            }
+            .submitBtn{
+                background: $secondaryColor;
+                border: none;
+                border-radius: 0px;
+                color: $white;
+                font-weight: bold;
+                margin: 20px 0px 10px 0px;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $primaryColor;
+        font-weight: 400;
+        &:hover{
+            color: $primaryColor;
+        }
+    }
+}
+
+
+.d-flex{
+    a{
+        margin-left: 10px;
+    }
+}
+
+.col-lg-6.col-md-6.col-sm-12{
+    label{
+        text-transform: uppercase ;
+        font-size:.8rem;
+    }
+
+    .form-group{
+        margin-top: 10px;
+           
+        .form-control{
+            box-shadow: none !important;
+            border: 1px solid #c4c4c4;
+            border-radius: 0px !important;
+        }
+    }
+}
+
+.regsubmitBtn{
+    background: $primaryColor !important;
+    color: $white !important;
+    font-weight: 400 !important;
+    box-shadow: none !important;
+    border: none !important;
+
+    &:hover{
+        background: $white !important;
+        color: $primaryColor !important;
+        border: .1rem solid $primaryColor !important;
+    }
+}
+
+
+
+/*==============Material Icons============
+========================================*/
+@font-face {
+  font-family: 'Material Icons';
+  font-style:normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot);
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url(https://example.com/MaterialIcons-Regular.woff2),
+  url(https://example.com/MaterialIcons-Regular.woff),
+  url(https://example.com/MaterialIcons-Regular.ttf);
+}
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/*==============End Material Icons============
+========================================*/
+
+.wrapper{
+  height: 100% !important;
+  width: 100% !important;
+  overflow: auto;
+}
+
+
+/*=======================================
+Sidebar style sheet
+========================================*/
+
+#sidebar{
+  position: fixed;
+  height: 100vh !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 11;
+  width: 260px;
+  overflow: auto;
+  transition: all 0.3s;
+  background-color: $primaryColor;
+  box-shadow: $shadow;
+
+  &::-webkit-scrollbar{
+    width: 5px;
+    border-radius: 10px;
+    background:#eee;
+    display: none;
+  }
+
+
+  &::-webkit-scrollbar-thumbs{
+    width: 5px;
+    border-radius: 10px;
+    background:#333;
+    display: none;
+  }
+
+  &:hover::-webkit-scrollbar{
+    display: block;
+  }
+
+  &:hover::-webkit-scrollbar-thumbs{
+    display: block;
+  }
+
+.sidebar-header{
+padding: 20px;
+background: $white;
+border-bottom: 1px solid #eee;
+h3{
+  color: #333;
+  font-size: 17px;
+  margin: 0;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  font-weight: 600;
+
+  img{
+    width: 45px;
+    margin-right: 10px;
+  }
+}
+}
+
+ul {
+  li{
+    padding: 2px 7px;
+
+    .active a{
+        color: $white !important;
+    }
+    a{
+      color: $white;
+     &:hover{
+       color: $primaryColor !important;
+       text-decoration: none !important;
+     } 
+     i{
+         background: $white;
+         color: $primaryColor !important;
+         &:hover{
+             color: $primaryColor;
+         }
+     }
+    }
+  }
+}
+
+}
+
+.dropdown-toggle::after{
+  position: absolute;
+  right: 10px;
+  top:23px
+}
+
+#sidebar ul li.dropdown{
+  position: sticky;
+  z-index: 999 !important;
+}
+
+#sidebar ul.component{
+  padding: 20px 0;
+}
+
+#sidebar ul li a{
+  padding: 10px;
+  line-height: 30px;
+  border-radius: 5px;
+  position: relative;
+  font-weight: 400;
+  display: block;
+  z-index: 999 !important;
+
+span{
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+i{
+  position: relative;
+  margin-right: 10px;
+  top: 5px;
+  color: $white;
+  margin-left: 10px;
+}
+}
+
+
+.menu li a{
+  background: $white !important;
+  color: $primaryColor !important;
+}
+
+/*=======================================
+Sidebar style sheet End
+========================================*/
+
+
+/*=======================================
+Main-content navbar-design start
+========================================*/
+
+#content{
+  transition: all 0.3s;
+  background: $gray;
+
+  .main-content{
+    padding: 10px 20px 0px 20px;
+    width: 100%;
+    top: 80px;
+    height: 100vh !important;
+    background: $gray;
+    overflow-x: hidden !important;
+  }
+
+.navbar{
+  background-color: $white;
+  box-shadow: $shadow;
+  color: $primaryColor;
+  // position: absolute;
+  z-index: 999999;
+  width: 100%;
+  height: 65px !important;
+  align-items: center;
+
+
+  button{
+    background-color: transparent;
+    border: none;
+    span{
+      color: $primaryColor;
+    }
+  }
+}
+}
+
+.navbar-brand{
+  color: $white;
+}
+#sidebar-collapse{
+  border-radius: 50%;
+  width:45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  margin-right: 20px;
+  border: none;
+  color: $white;
+  box-shadow: none !important;
+
+span{
+  margin: 9px;
+  padding:0;
+}
+}
+
+.cursorBtn{
+    span{
+        background: $white !important;
+        color: $primaryColor !important; 
+        cursor: pointer;   
+    }
+}
+
+
+.navbar-nav > li.active{
+ color: #fff;
+ border-radius: 4px;
+}
+
+.navbar-nav > li > a{
+  color: $primaryColor;
+}
+
+.navbar .notification{
+  position: absolute;
+  top: 0px;
+  right: 2px;
+  display: block;
+  font-size: 9px;
+  border: 0px;
+  font-size: 10px;
+  background: $primaryColor;
+  min-width: 15px;
+  text-align: center;
+  padding: 1px 5px;
+  height: 15px;
+  color: $white;
+  border-radius: 50%;
+  line-height: 14px;
+}
+
+
+.navbar-nav > li.show .dropdown-menu{
+  transform: translate3d(0,0,0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-menu li > a{
+  font-size: 13px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 2px;
+  font-weight: 400;
+  transition:all 1500ms linear;
+}
+
+
+.navbar-nav > .active > a:focus{
+  color: $white;
+  background: $lightPrimary;
+}
+
+.navbar-nav li a{
+  position: relative;
+  display: block;
+  padding: 10px 15px !important;
+}
+
+
+/*=======================================
+Main-content navbar-design end
+========================================*/
+
+
+
+
+
+
+
+/*=======================================
+Footer design end
+========================================*/
+
+
+.dash{
+  color: $primaryColor;
+  font-weight: 500;
+}
+#sidebar.show-nav, .body-overlay.show-nav{
+  transform: translatex(0%);
+  opacity: 1;
+  display: block;
+  visibility: visible;
+  z-index: 15;
+}
+
+
+/*=======================================
+media queries start
+========================================*/
+@media only screen and (min-width:992px){
+  #sidebar.active{
+    width: 80px !important;
+    height: 100% !important;
+    position: absolute !important;
+    overflow: visible !important;
+    top: 0;
+    z-index: 666;
+    float: left !important;
+    bottom: 0 !important;
+
+  }
+
+  #sidebar.active .sidebar-header h3 span{
+    display: none;
+    transition: all 0.5s ease;
+  }
+
+  #sidebar.active ul li a span{
+    display: none;
+    transition: all 0.5s ease;
+  }
+
+  #sidebar.active .dropdown-toggle::after{
+    display: none;
+    transition: all 0.5s ease;
+  }
+
+  #content{
+    width: calc(100% - 260px);
+    position: relative;
+    float: right;
+    transition: all 0.3;
+    background: $gray;
+  }
+
+  #content.active{
+    width:calc(100% - 80px)
+  }
+
+  #sidebar.active .menu{
+    position: absolute;
+    left: 81px;
+    background-color: $white;
+    width: 180px;
+    height: auto;
+    margin: 15px 0;
+    top: 0;
+    border: 1px solid #dcd9d9;
+    z-index: 4;
+  }
+
+  .dropdown-menu{
+    border: 0;
+    box-shadow:$shadow;
+    transition: translate3d(0, -20px, 0);
+    visibility: hidden;
+    transition: all 150ms linear;
+    display: block;
+    min-width: 15rem;
+    right: 0;
+    left: auto;
+    opacity: 0;
+  }
+
+}
+
+
+@media only screen and (max-width:992px){
+#sidebar{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 260px;
+  transform: translatex(-100%);
+  box-shadow: $shadow;
+  transition: all 150ms linear;
+  box-shadow: none !important;
+
+}
+
+.body-overlay{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 3;
+  transition: all 150ms linear;
+background: rgba(0,0,0,0.5);
+}
+}
+
+.dropdown:hover, .dropdown.a:hover{
+    background: $white !important;
+    color: $primaryColor !important;
+}
+
+
+.dashboardWrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 10px;
+  background: $white;
+  box-shadow: $shadow;
+  color: $primaryColor;
+  .right{
+      width: 20%;
+      float: right;
+      span{
+          font-size: 3rem;
+      }
+  }
+
+  .left{
+      float: left;
+      width: 80%;
+  }
+}
+
+
+.full-statsWrapper{
+    background: $white;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .userInfo{
+        display: flex;
+        align-items: center;
+        color: $primaryColor;
+        justify-content: space-between;
+        span{
+            font-size: 4rem;
+        }
+    }
+
+    .purple{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: $primaryColor;
+    }
+
+
+    .red{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: red;
+    }
+ 
+}
+
+.downWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .user-stats{
+        margin-top: 10px;
+        h4{
+            margin-bottom: 10px;
+            margin-top: -15px;
+        }
+    }
+
+    .user-number{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+
+        .right, .left{
+            p{
+                font-size: .6rem;
+            }
+            h6{
+                margin-top: -15px;
+            }
+        }
+    }
+}
+
+
+
+.linksUser{
+    display: flex !important;
+flex-direction: column !important;
+justify-content: center !important;
+
+button{
+    margin-top: 10px;
+    height: 30px;
+    background: $secondaryColor;
+    border: none;
+    box-shadow: none !important;    
+    a{
+        color: $white;
+        text-decoration: none !important;
+    }
+}
+}
+
+
+.amountTotal{
+    background: $white;
+    padding: 20px;
+
+    h6{
+        color: #aaaaaa;
+        font: $poppins;
+    }
+}
+
+.br{
+    border-right: 2px solid ;
+    height: 70px;
+
+    @media (max-width:750px) {
+        border-right: none !important;
+    }
+}
+
+.amountWrapper{
+    background: $white;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-top: 20px;
+}
+
+.topWrapper{
+  .nav {
+    .nav-item{
+      .nav-link{
+        color: $black !important;
+      }
+    }
+  }
+}  
+
+
+.jusTab{
+  justify-content: space-between;
+}
+
+.secondWrapper {
+  form{
+    .form-control{
+      border: 1px solid #aaaaaa;
+      background: transparent;
+      border-radius: 0px !important;
+      margin-right: 20px;
+      width: 300px !important;
+      box-shadow: none !important;
+    }
+
+    .searchBtn{
+      width: 80px;
+      background: $secondaryColor;
+      color: $white;
+      border: 0px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+}
+
+.inventAction{
+  button{
+    height: 30px;
+    border: none;
+    padding: 5px;
+    font-weight: 500;
+    background: $primaryColor;
+    color: $white;
+    box-shadow: none !important;
+    border:  0px !important;
+    outline: none !important;
+    cursor: pointer !important;
+    &:hover{
+      background: $secondaryColor;
+      color: $black;
+    }
+  }
+}
+
+
+div#myTable_filter{
+  input{
+    border: 1px solid #590a5b !important;
+    outline: none !important;
+    padding-left:10px;
+  }
+}
+
+.dashboardWrappero{
+  box-shadow: $shadow;
+  padding: 10px;
+  background: $primaryColor;
+  display: flex !important;
+  flex-direction: column;
+
+  .audit-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+    margin-bottom: 20px;
+    p{
+      margin-bottom: 0px !important;
+    }
+  }
+
+  h3{
+    color: $white;
+  }
+}
+
+.customer-service{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  img{
+    width: 100%;
+  }
+
+  h3{
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    line-height: 1.5 !important;
+  }
+}
+
+.cont{
+  width: 100%;
+  .row{
+    width: 60%;
+    margin: auto;
+  }
+}
+
+.contact-list{
+  button{
+    margin-left: 20px;
+    padding: 10px;
+    background: transparent;
+    border: 2px solid $primaryColor;
+    cursor: pointer;
+    color: $primaryColor;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+}
+

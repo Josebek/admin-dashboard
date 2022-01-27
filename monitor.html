@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Josebek Store</title>
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/datatables.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="body-overlay"></div>
+        <div id="content">
+            <div class="top-navbar">
+                <nav class="navbar navbar-expand-lg">
+                    <div type="button" id="sidebar-collapse" class="cursorBtn d-xl-block d-lg-block d-md-none d-none">
+                        <span class="material-icons">arrow_back_ios</span>
+                    </div>
+
+                    <button type="button" class="d-inline-block d-lg-none ml-auto more-button"
+                        data-target="#navbarcollapse" aria-controls="navbarcollapse" aria-label="Toggle"
+                        aria-expanded="false" data-toggle="collapse">
+                        <i class="material-icons" style="color: #590a5b; font-size:30px">menu</i>
+                    </button>
+                    <div class="collapse navbar-collapse d-lg-block d-xl-block d-sm-none d-md-none d-none"
+                        id="navbarcollapse">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item dropdown active">
+                                <a href="#" class="nav-link" data-toggle="dropdown">
+                                    <span class="material-icons">mail</span>
+                                    <span class="notification">4</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">You have 4 new message</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">You have 4 new message</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">You have 4 new message</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">You have 4 new message</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link"><span class="material-icons">notifications</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link d-flex">
+                                    <span class="material-icons" style="font-size: 25px;">account_circle</span>
+                                    <div class="userDetails">
+                                        <h6 class="d-flex flex-md-column">Jack Hanniel <span
+                                                style="font-size: .9rem; font-weight: 300;">Admin</span></h6>
+
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- -----------------main content----------------------------- -->
+            <div class="main-content bg-white">
+
+                <h3 class="mt-5">Sales Representative</h3>
+
+        <div class="page-content page-container" id="page-content">
+           <div class="row">
+                    <div class="container-fluid d-flex justify-content-center">
+                        <div class="col-lg-8 col-sm-10 col-md-6">
+                                    <div class="chartjs-size-full">
+                                        <div class="chartjs-size-monitor-expand" style="width:100%; position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                        </div>
+                                    </div> <canvas id="chart-line" width="299" height="200" class="chartjs-render-monitor" style="display: block; width: 100px; height: 200px;"></canvas>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+  
+
+
+
+
+            </div>
+            <!-----Footer----->
+
+        </div>
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3><img src="image/logo.PNG" alt="logo" class="image-fluid" /><span>Josebek</span></h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="dropdown">
+                    <a href="dashboard.html">
+                        <i class="material-icons">dashboard</i> <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="inventory.html">
+                        <i class="material-icons">assignment</i> <span>Inventory</span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="monitoring.html">
+                        <i class="material-icons">people</i> <span>User Monitoring</span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="logistic.html">
+                        <i class="material-icons">domain</i> <span>Logistic Companies</span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="audit.html">
+                        <i class="material-icons">content_paste</i> <span>Audit</span>
+                    </a>
+                </li>
+
+
+                <li class="dropdown">
+                    <a href="orders.html">
+                        <i class="material-icons">personal_video</i> <span>Orders Display</span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="monitor.html">
+                        <i class="material-icons">screen_share</i> <span>SR Monitor</span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="customer.html">
+                        <i class="material-icons">perm_phone_msg</i> <span>Customer Service</span>
+                    </a>
+                </li>
+            </ul>
+
+
+        </nav>
+
+    </div>
+
+
+
+
+
+
+    <!-- Bootstrap javascript -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/datatable.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+    <script src="js/main.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#sidebar-collapse").on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $('#content').toggleClass('active');
+            });
+            $(".more-button, .body-overlay").on('click', function () {
+                $('#sidebar, .body-overlay').toggleClass('show-nav');
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function (){
+            $('#myTable').DataTable();
+        });
+    </script>
+
+
+<script>
+    $(document).ready(function() {
+        var ctx = $("#chart-line");
+        var myLineChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                datasets: [
+                {
+                    data: [568, 370, 178, 190, 203, 276, 408, 547, 175, 274, 734, 432],
+                    fill: false,
+                    label: "Barchat Showing the Number of Referals",
+                    backgroundColor: '#590a5b',
+                }]
+            }
+            
+        });
+    });
+</script>
+</body>
+
+</html>
